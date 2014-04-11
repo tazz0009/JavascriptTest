@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
+	<script src="./js02_01.js"></script>
+	<script src="./resources/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+	
+	var test = [{name:'a'}, {name:'b'}, {name:'c'}];
+	
+	test.each(function(index) {
+		console.log(index + " = " + this.name);
+	});
+	
+	var Test = function() {
+	     this.print = function() {
+	          alert("this.print");
+	     };
+	};
+	 
+	console.log(Test.prototype);
+	</script>
+</head>
+<body>
+	<h3>프로토타입</h3>
+</body>
+</html>

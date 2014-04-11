@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
+	<script src="./resources/jquery-2.1.0.js"></script>
+	<script src="./js01_01.js"></script>
+	<script type="text/javascript">
+	
+	$(function(){
+		var personList = [new Person("Jae-Seok", "Hong"), new Person("Ji-Sung", "Jung")];
+		
+		$("#result")
+			.append("'" + personList[0] + "' 과 '" + personList[1] + "'이 태어났습니다.<br/>")
+			.append("현재 인구는 " + Person.population + "명 입니다.<br/><br/>");
+		
+		console.log("'" + personList[0] + "' 과 '" + personList[1] + "'이 태어났습니다.<br/>");
+		console.log("현재 인구는 " + Person.population + "명 입니다.<br/><br/>");
+		
+		for (var i = 0 ; i < 25; i++) {
+			personList[0].addAge();
+			personList[1].addAge();
+		}
+		
+		$("#result")
+			.append("'" + personList[0] + "'은 " + personList[0].age + "살이 되었습니다.<br/>");
+		
+		console.log("'" + personList[0] + "'은 " + personList[0].age + "살이 되었습니다.<br/>");
+	
+		Person.showTotalPopulation("총 인구");
+	});
+	</script>
+</head>
+<body>
+	<h3>클래스 정의</h3>
+	<p id="result"></p>
+</body>
+</html>
